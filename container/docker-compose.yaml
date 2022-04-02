@@ -1,0 +1,8 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:1.15-alphine
+    volumes:
+      - .conf:/etc/nginx/conf.f
+    ports:
+      - 80:8585
