@@ -17,6 +17,7 @@ public class CashStreamingRequest implements StreamObserver<DepositRequest> {
     @Override
     public void onNext(DepositRequest value) {
         int accountNumber = value.getAccountNumber();
+        System.out.println("received cash deposit for account# "+ accountNumber);
         int amount = value.getAmount();
         accountBalance = amount;
     }
